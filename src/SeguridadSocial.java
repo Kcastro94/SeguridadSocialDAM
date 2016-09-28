@@ -43,7 +43,7 @@ public class SeguridadSocial {
     }
 
     public List<Persona> obtenerPersonasMayoresQue(LocalDate fecha){
-        return personasList.stream().filter(persona -> persona.getFechaNacimiento().isAfter(fecha)).collect(Collectors.toList());
+        return personasList.stream().filter(persona -> persona.getFechaNacimiento().isBefore(fecha)).collect(Collectors.toList());
     }
 
     public List<Persona> obtenerTodas(){
